@@ -10,7 +10,7 @@
 1. Ve a [Actions - Validar Datos de Prueba](https://github.com/titortizc/falabella-datos/actions/workflows/validar.yml)
 2. Click en **Run workflow** → **Run workflow**
 3. Espera a que termine
-4. Descarga el log `hallazgos-log` en Artifacts
+4. Descarga el log hallazgos-log en Artifacts
 
 ### Opción 2: Local
 1. Descargar el repositorio manual
