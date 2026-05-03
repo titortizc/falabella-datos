@@ -123,9 +123,9 @@ def validar_regla_normativa(reporte, fuentes_combinadas):
     return ids_violados
 
 # ------------------------------
-# 4. Resumen y assert final
+# 4. Resumen 
 # ------------------------------
-def generar_resumen_y_assert(huérfanos, discrepancias, violaciones_a1):
+def generar_resumen(huérfanos, discrepancias, violaciones_a1):
     logger.info("\n" + "="*60)
     logger.info("RESUMEN DE VALIDACIONES")
     logger.info("="*60)
@@ -153,7 +153,7 @@ def generar_resumen_y_assert(huérfanos, discrepancias, violaciones_a1):
         logger.info("REGLA A1: Todos los IDs con tipo A1 están APROBADOS.")
 
     if mensaje_error:
-        # Lanzamos assert con todos los fallos acumulados
+        # se lanza assert con todos los fallos acumulados
         assert False, f"El reporte no supera las validaciones:\n{mensaje_error}"
     else:
         logger.info("EL REPORTE SUPERA TODAS LAS VALIDACIONES EXITOSAMENTE.")
@@ -188,8 +188,8 @@ def main():
     discrepancias = validar_exactitud(reporte, consolidado)
     violaciones_a1 = validar_regla_normativa(reporte, fuentes_combinadas)
 
-    # Resumen y assert final
-    generar_resumen_y_assert(huerfanos, discrepancias, violaciones_a1)
+    #generar resumen
+    generar_resumen(huerfanos, discrepancias, violaciones_a1)
 
 if __name__ == "__main__":
     main()
