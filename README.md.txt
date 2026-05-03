@@ -1,0 +1,10 @@
+# Validación de Reporte Maestro
+
+## Requisitos para el entorno
+
+- Python 3.8+
+- Pandas, openpyxl
+
+Instalación:
+```bash
+pip install pandas openpyxl

@@ -1,0 +1,6 @@
+SISTEMA_LEGADO_v2.1 - EXTRACTO_CONFIDENCIAL
+GENERADO EL 2026-04-30
+--------------------------------------
+id_transaccion;monto;tipo_norma
+TXN-003-2026;1200.00;A1
+TXN-001-2026;500.25;A1
