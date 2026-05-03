@@ -1,7 +1,7 @@
-name: Validar Datos
+name: Validar Datos de Prueba
 
 on:
-  workflow_dispatch:  # Permite ejecutar manualmente desde GitHub
+  workflow_dispatch:
 
 jobs:
   validar:
@@ -9,7 +9,7 @@ jobs:
     
     steps:
       - name: Checkout código
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
       
       - name: Configurar Python
         uses: actions/setup-python@v4
@@ -26,7 +26,7 @@ jobs:
       
       - name: Subir log de hallazgos
         if: always()
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: hallazgos-log
           path: hallazgos.log
